@@ -1,3 +1,83 @@
-<p>
-  add-tracker works!
-</p>
+<div class="add-form bottom-space">
+  <form class="ui form" (ngSubmit)="submitForm()">
+    <h4 class="ui dividing header">Stock</h4>
+    <div class="three fields">
+      <div class="field">
+        <label>Quarter</label>
+        <input type="text" name="quarter" [(ngModel)]="stockTracker.quarter" placeholder="Quarter">
+      </div>
+      <div class="field">
+        <label>Stock</label>
+        <input type="text" name="stock" [(ngModel)]="stockTracker.stock" placeholder="stock">
+      </div>
+      <div class="field">
+        <label>Date</label>
+        <input type="text" name="date" [(ngModel)]="stockTracker.date" placeholder="date">
+      </div>
+    </div>
+    <h4 class="ui dividing header">Price</h4>
+    <div class="two fields">
+        <div class="field">
+          <label>Open</label>
+          <input type="text" name="open" [(ngModel)]="stockTracker.open" placeholder="open">
+        </div>
+        <div class="field">
+          <label>High</label>
+          <input type="text" name="high" [(ngModel)]="stockTracker.high" placeholder="high">
+        </div>
+      </div>
+      <div class="two fields">
+        <div class="field">
+          <label>low</label>
+          <input type="text" name="low" [(ngModel)]="stockTracker.low" placeholder="low">
+        </div>
+        <div class="field">
+          <label>Close</label>
+          <input type="text" name="close" [(ngModel)]="stockTracker.close" placeholder="close">
+        </div>
+    </div>
+
+    <div class="two fields">
+      <div class="field">
+        <label>Price Change %</label>
+        <input type="text" name="percentChangePrice" [(ngModel)]="stockTracker.percentChangePrice" placeholder="Percent Change Price">
+      </div>
+      <div class="field">
+        <label>Next Week Price change %</label>
+        <input type="text" name="percentChangeNextWeeksPrice" [(ngModel)]="stockTracker.percentChangeNextWeeksPrice"
+          placeholder="Percent Change Next Weeks Price">
+      </div>
+    </div>
+
+    <h4 class="ui dividing header">Volume</h4>
+    <div class="three fields">
+      <div class="field">
+        <label>Volume</label>
+        <input type="text" name="volume" [(ngModel)]="stockTracker.volume" placeholder="volume">
+      </div>
+      <div class="field">
+        <label>Previous Week Volume</label>
+        <input type="text" name="previousWeeksVolume" [(ngModel)]="stockTracker.previousWeeksVolume" placeholder="Previous Weeks Volume">
+      </div>
+      <div class="field">
+        <label>Weekly Volume Change %</label>
+        <input type="text" name="percentChangeVolumeOverLastWk" [(ngModel)]="stockTracker.percentChangeVolumeOverLastWk"
+          placeholder="Percent Change Volume Over Last Wk">
+      </div>
+    </div>
+    
+    <h4 class="ui dividing header">Next Week</h4>
+    <div class="two fields">
+      <div class="field">
+        <label>Next Week Open</label>
+        <input type="text" name="nextWeeksOpen" [(ngModel)]="stockTracker.nextWeeksOpen" placeholder="Next Weeks Open">
+      </div>
+      <div class="field">
+        <label>Next Week Close</label>
+        <input type="text" name="nextWeeksClose" [(ngModel)]="stockTracker.nextWeeksClose" placeholder="Next Week Close">
+      </div>
+    </div>
+
+    <button class="ui button" type="submit">Submit</button>
+  </form>
+</div>
