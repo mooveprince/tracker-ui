@@ -1,0 +1,47 @@
+<div class="top-space">
+
+  <table class="ui celled table">
+    <thead>
+      <tr>
+        <th>Sno</th>
+        <th>Quarter</th>
+        <th>Stock</th>
+        <th>Date</th>
+        <th>Open</th>
+        <th>High</th>
+        <th>Low</th>
+        <th>Close</th>
+        <th>Volume</th>
+        <th>Price change %</th>
+        <th>Previous Week Volume</th>
+        <th>Volume Change %</th>
+        <th>Next week open</th>
+        <th>Next week close</th>
+        <th>Next week price change %</th>
+
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let stockTracker of searchResponse.stockTracker; index as i">
+        <td>{{i+1}}</td>
+        <td data-label="Quarter">{{ stockTracker.quarter }}</td>
+        <td data-label="Stock">{{ stockTracker.stock }}</td>
+        <td data-label="Date">{{ stockTracker.date }}</td>
+        <td data-label="Open">{{ stockTracker.open }}</td>
+        <td data-label="High">{{ stockTracker.high }}</td>
+        <td data-label="Low">{{ stockTracker.low }}</td>
+        <td data-label="Close">{{ stockTracker.close }}</td>
+        <td data-label="Volume">{{ stockTracker.volume }}</td>
+        <td data-label="Price change %">{{ stockTracker.percentChangePrice }}</td>
+        <td data-label="Previous Week Volume">{{ stockTracker.previousWeeksVolume }}</td>
+        <td data-label="Volume Change %">{{ stockTracker.percentChangeVolumeOverLastWk }}</td>
+        <td data-label="Next week open">{{ stockTracker.nextWeeksOpen }}</td>
+        <td data-label="Next week close">{{ stockTracker.nextWeeksClose }}</td>
+        <td data-label="Next week price change %">{{ stockTracker.percentChangeNextWeeksPrice }}</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</div>
