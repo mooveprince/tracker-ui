@@ -8,23 +8,21 @@
     <button class="ui button" type="submit">Submit</button>
   </form>
 
-  <ng-template #errorMessage>
-    <div class="top-space">
-      <div class="ui error message">
-        <div class="header">Error</div>
-        <p>This company is not available</p>
-      </div>
-    </div>
-  </ng-template>
-  
-
   <div *ngIf="displaySpinner" class="ui active loader"></div>
 
   <div *ngIf="searchResponse">
     <div *ngIf="searchResponse.stockTracker.length > 0; else errorMessage ">
       <app-search-result [searchResponse]="searchResponse"></app-search-result>
     </div>
-    
   </div>
+
+  <ng-template #errorMessage>
+    <div class="top-space">
+      <div class="ui error message">
+        <div class="header">Error</div>
+        <p>{{ searchResponse.stockTrackerError.errorDescription || "This company is not available" }} </p>
+      </div>
+    </div>
+  </ng-template>
 
 </div>

@@ -5,6 +5,6 @@ export class AddResponse {
 
     inputRequest: InputRequest;
     addStockTrackerStatus: string;
-    error: Error
+    stockTrackerError: Error
     
 }

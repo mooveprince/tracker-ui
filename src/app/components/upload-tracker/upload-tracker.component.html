@@ -20,7 +20,7 @@
     <div class="top-space">
       <div class="ui error message">
         <div class="header">Error</div>
-        <p>Error in uploading the file</p>
+        <p>{{ uploadResponse.stockTrackerError.errorDescription || "This company is not available" }} </p>
       </div>
     </div>
   </ng-template>

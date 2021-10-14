@@ -4,7 +4,7 @@ import { StockTracker } from "./StockTracker";
 
 export class SearchResponse {
 
-    error: Error;
+    stockTrackerError: Error;
     searchRequest: SearchRequest;
     stockTracker: StockTracker[];
 

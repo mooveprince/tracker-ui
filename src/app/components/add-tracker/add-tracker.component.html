@@ -12,7 +12,7 @@
       </div>
       <div class="field">
         <label>Date</label>
-        <input type="text" name="date" [(ngModel)]="stockTracker.date" placeholder="date">
+        <input type="text" name="date" [(ngModel)]="stockTracker.date" placeholder="YYYY-MM-DD">
       </div>
     </div>
     <h4 class="ui dividing header">Price</h4>
@@ -83,7 +83,7 @@
 
   <div *ngIf="addResponse">
     <div *ngIf = "addResponse.addStockTrackerStatus === 'SUCCESSFULLY ADDED'; else errorMessage">
-      <div class="top-space">
+      <div class="top-space bottom-space">
         <div class="ui success message">
           <p>Record has been added to stock tracker</p>
         </div>
@@ -92,10 +92,10 @@
   </div>
 
   <ng-template #errorMessage>
-    <div class="top-space">
+    <div class="top-space bottom-space">
       <div class="ui error message">
         <div class="header">Error</div>
-        <p>Error in adding the record</p>
+        <p>{{ addResponse.stockTrackerError.errorDescription || "Error in adding the record" }} </p>
       </div>
     </div>
   </ng-template>
