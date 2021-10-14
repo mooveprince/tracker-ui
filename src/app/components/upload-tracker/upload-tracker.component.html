@@ -1,3 +1,29 @@
-<p>
-  upload-tracker works!
-</p>
+<div class="upload-form">
+  <form class="ui form" (ngSubmit)="submitForm()">
+    <div class="field">
+      <input type="file" name="file" placeholder="Upload File" (change)="fileInput($event.target.files)">
+    </div>
+    <button class="ui button" type="submit">Submit</button>
+  </form>
+
+  <div *ngIf="uploadResponse">
+    <div *ngIf = "uploadResponse.fileUploadStatus === 'COMPLETED'; else errorMessage">
+      <div class="top-space">
+        <div class="ui success message">
+          <p>File has been uploaded to tracker</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #errorMessage>
+    <div class="top-space">
+      <div class="ui error message">
+        <div class="header">Error</div>
+        <p>Error in uploading the file</p>
+      </div>
+    </div>
+  </ng-template>
+
+
+</div>

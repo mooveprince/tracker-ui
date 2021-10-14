@@ -80,4 +80,24 @@
 
     <button class="ui button" type="submit">Submit</button>
   </form>
+
+  <div *ngIf="addResponse">
+    <div *ngIf = "addResponse.addStockTrackerStatus === 'SUCCESSFULLY ADDED'; else errorMessage">
+      <div class="top-space">
+        <div class="ui success message">
+          <p>Record has been added to stock tracker</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #errorMessage>
+    <div class="top-space">
+      <div class="ui error message">
+        <div class="header">Error</div>
+        <p>Error in adding the record</p>
+      </div>
+    </div>
+  </ng-template>
+
 </div>
