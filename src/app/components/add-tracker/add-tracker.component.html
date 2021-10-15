@@ -49,6 +49,17 @@
       </div>
     </div>
 
+    <div class="two fields">
+      <div class="field">
+        <label>Next Week Open</label>
+        <input type="text" name="nextWeeksOpen" [(ngModel)]="stockTracker.nextWeeksOpen" placeholder="Next Weeks Open">
+      </div>
+      <div class="field">
+        <label>Next Week Close</label>
+        <input type="text" name="nextWeeksClose" [(ngModel)]="stockTracker.nextWeeksClose" placeholder="Next Week Close">
+      </div>
+    </div>
+
     <h4 class="ui dividing header">Volume</h4>
     <div class="three fields">
       <div class="field">
@@ -66,18 +77,6 @@
       </div>
     </div>
     
-    <h4 class="ui dividing header">Next Week</h4>
-    <div class="two fields">
-      <div class="field">
-        <label>Next Week Open</label>
-        <input type="text" name="nextWeeksOpen" [(ngModel)]="stockTracker.nextWeeksOpen" placeholder="Next Weeks Open">
-      </div>
-      <div class="field">
-        <label>Next Week Close</label>
-        <input type="text" name="nextWeeksClose" [(ngModel)]="stockTracker.nextWeeksClose" placeholder="Next Week Close">
-      </div>
-    </div>
-
     <button class="ui button" type="submit">Submit</button>
   </form>
 
